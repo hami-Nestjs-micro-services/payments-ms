@@ -15,6 +15,6 @@ async function bootstrap() {
     })
   );
   await app.listen(envs.port ?? 3000);
-  logger.log(`Payments-ms running on port http://${envs.port}`);
+  logger.log(`Payments-ms on running on port http://${envs.port}`);
 }
 bootstrap();
