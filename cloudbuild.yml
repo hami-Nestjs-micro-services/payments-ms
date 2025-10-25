@@ -1,0 +1,18 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "us-east4-docker.pkg.dev/granja-don-rafa-dev/curso-ms-nest/payments-sms",
+        "-f",
+        "dockerfile.prod",
+        "--platform=linux/amd64",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "us-east4-docker.pkg.dev/granja-don-rafa-dev/curso-ms-nest/payments-sms",
+      ]
